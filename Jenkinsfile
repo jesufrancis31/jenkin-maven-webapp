@@ -19,8 +19,8 @@ node {
     stage ('Upload Artifacts to Nexus'){
         sh "${mavenHome}/bin/mvn deploy"
     }
-    stage ('Deploy app in to tomcat') {
-    sh "scp ${WORKSPACE}/target/*.war root@18.219.72.28:/opt/apache-tomcat-9.0.17/webapps"
+    stage ('Deploy app in to wildfly') {
+    sh "scp ${WORKSPACE}/target/*.war root@18.219.72.28:/home/ec2-user/wildfly/wildfly-16.0.0.Final/standalone/deployments"
 }
     
 }
