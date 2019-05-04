@@ -1,5 +1,5 @@
 #!groovy
-node {
+node ('node1') {
     properties([
     buildDiscarder(logRotator(numToKeepStr: '3')),
     pipelineTriggers([
