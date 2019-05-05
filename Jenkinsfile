@@ -13,7 +13,7 @@ node ('node1') {
     stage ('build MAVEN code') {
         sh "${mavenHome}/bin/mvn clean package"
     }
-   /* stage ('Execute SONARQUBE Reports') {
+   /*stage ('Execute SONARQUBE Reports') {
         sh "${mavenHome}/bin/mvn sonar:sonar"
     }
     stage ('Upload Artifacts to Nexus'){
@@ -21,15 +21,14 @@ node ('node1') {
     }
     stage ('Deploy app in to wildfly') {
     sh "scp ${WORKSPACE}/target/*.war root@18.219.72.28:/home/ec2-user/wildfly/wildfly-16.0.0.Final/standalone/deployments"
-}
+} */
     
-}/*
+}
    stage ('emailNotification')
    {
        emailext attachLog: true, body: 'The Maven Web Application Project Build is Successful...!', subject: 'Build Success', to: 'jesu.devops@gmail.com'
    }
 
 stage ('SendEmailNotification') {
-emailext body: 'Build is Over', subject: 'Build is Over', to: 'jesu.devops@gmail.com'
-    
+emailext body: 'Build is Over', subject: 'Build is Over', to: 'jesu.devops@gmail.com'   
 }
