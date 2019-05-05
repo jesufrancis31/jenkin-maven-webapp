@@ -1,7 +1,7 @@
 #!groovy
 node ('node1') {
     properties([
-    buildDiscarder(logRotator(numToKeepStr: '3')),
+    buildDiscarder(logRotator(numToKeepStr: '2')),
     pipelineTriggers([
         pollSCM('* * * * *')
     ])
