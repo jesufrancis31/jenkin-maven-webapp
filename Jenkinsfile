@@ -2,8 +2,6 @@
 node ('node1') {
     properties([
     buildDiscarder(logRotator(numToKeepStr: '3')),
-    pipelineTriggers(
-    ])
 ])
     def mavenHome= tool name: 'mave3.6.1', type: 'maven'
     stage ('checkout GIT code') {
