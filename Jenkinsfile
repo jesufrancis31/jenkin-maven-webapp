@@ -3,7 +3,6 @@ node ('node1') {
     label 'node1-label'
     properties([
     buildDiscarder(logRotator(numToKeepStr: '3')),
-        properties([enableConcurrentBuilds()])
 ])
     def mavenHome= tool name: 'mave3.6.1', type: 'maven'
     stage ('checkout GIT code') {
