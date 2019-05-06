@@ -27,5 +27,6 @@ node ('node1') {
    }
 
 stage ('SendEmailNotification') {
-emailext body: 'Build is Over', subject: 'Build is Over', to: 'jesu.devops@gmail.com'   
+emailext body: 'Build is Over', subject: 'Build is Over', to: 'jesu.devops@gmail.com' 
+
 }
