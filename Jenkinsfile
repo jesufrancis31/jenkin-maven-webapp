@@ -22,14 +22,5 @@ node ('label-1') {
     
 }
 stage ('SendEmailNotification') {
-emailext body: 'Build is Over', subject: 'Build is Over', to: 'jesu.devops@gmail.com'
- 
- 	  	   stage('Send Slack Notification'){
-  	       slackSend baseUrl: 'https://devops-team-bangalore.slack.com/services/hooks/jenkins-ci/', 
-  	                 channel: 'build-notifcation', 
-  	                 color: 'blue', 
-  	                 message: 'Build done successfully ', 
-  	                 tokenCredentialId: '193d10e7-9280-4629-84e8-5ec4a30b87b5',
-					 teamDomain: 'https://devops-team-bangalore.slack.com/services/hooks/jenkins-ci/'
-}
+emailext body: 'Build is Over', subject: 'Build is Over', to: 'jesu.devops@gmail.com' 	  	
 }
