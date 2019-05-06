@@ -32,3 +32,4 @@ emailext body: 'Build is Over', subject: 'Build is Over', to: 'jesu.devops@gmail
   	                 tokenCredentialId: '193d10e7-9280-4629-84e8-5ec4a30b87b5',
 					 teamDomain: 'https://devops-team-bangalore.slack.com/services/hooks/jenkins-ci/'
 }
+}
