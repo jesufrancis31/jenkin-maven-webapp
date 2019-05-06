@@ -1,5 +1,6 @@
 #!groovy
 node ('node1') {
+    label 'node1-label'
     properties([
     buildDiscarder(logRotator(numToKeepStr: '3')),
 ])
