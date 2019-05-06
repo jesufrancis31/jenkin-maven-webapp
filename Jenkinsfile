@@ -21,14 +21,9 @@ node ('label-1') {
 } */
     
 }
- */  stage ('emailNotification')
-   {
-       emailext attachLog: true, body: 'The Maven Web Application Project Build is Successful...!', subject: 'Build Success', to: 'jesu.devops@gmail.com'
-   }
-
+}
 stage ('SendEmailNotification') {
-emailext body: 'Build is Over', subject: 'Build is Over', to: 'jesu.devops@gmail.com' 
-*/
+emailext body: 'Build is Over', subject: 'Build is Over', to: 'jesu.devops@gmail.com'
  
  	  	   stage('Send Slack Notification'){
   	       slackSend baseUrl: 'https://devops-team-bangalore.slack.com/services/hooks/jenkins-ci/', 
