@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  tomcat:
+    image: 18.219.192.147:8083/image-1
+    ports:
+      - "8090:8080"
